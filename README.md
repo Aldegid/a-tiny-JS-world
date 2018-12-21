@@ -137,6 +137,14 @@ Read about
 
 </details>
 
+Once you are happy with your app, or at least id doesn't report any errors in dev console
+you may consider it to be of release quality and worth merging into master:
+
+`git checkout master && git merge populate-world`
+
+However proceed with any further changes when on `populate-world` or
+another feature branch, merging into `master` from time to time.
+
 ### Publishing
 
 Push your repo to github.
@@ -169,6 +177,17 @@ git push origin gh-pages
 git checkout master
 ```
 
+**NB!** Your project may not be published or updated immediately.
+Try refreshing your page in 5 to 10 minutes after pushing `gh-pages`.
+
+If you want to have your fork published before any changes pushed
+(i.e. original `gh-pages`) then do the following to trigger 
+publishing:
+```
+git push -f origin origin/gh-pages^:gh-pages
+git push origin origin/gh-pages:gh-pages
+```
+
 [_^ Up to TOC ^_](#table-of-contents)
 
 ## What's next
@@ -194,6 +213,9 @@ Grant this repo a :star:!
      - number of code lines your object definitions take
      - your github nick in square brackets
        and link to your repository in parentheses
+       
+   * Add an extra new line so additions from other contributors
+     do not affect yours.
 
    * Switch to Preview tab to check if the table still looks
      nice.
